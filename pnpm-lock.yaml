@@ -11,9 +11,15 @@ importers:
       expo:
         specifier: ~53.0.12
         version: 53.0.12(@babel/core@7.27.4)(react-native@0.79.4(@babel/core@7.27.4)(react@19.0.0))(react@19.0.0)
+      expo-image-picker:
+        specifier: ~16.1.4
+        version: 16.1.4(expo@53.0.12(@babel/core@7.27.4)(react-native@0.79.4(@babel/core@7.27.4)(react@19.0.0))(react@19.0.0))
       expo-status-bar:
         specifier: ~2.2.3
         version: 2.2.3(react-native@0.79.4(@babel/core@7.27.4)(react@19.0.0))(react@19.0.0)
+      expo-video:
+        specifier: ~2.2.2
+        version: 2.2.2(expo@53.0.12(@babel/core@7.27.4)(react-native@0.79.4(@babel/core@7.27.4)(react@19.0.0))(react@19.0.0))(react-native@0.79.4(@babel/core@7.27.4)(react@19.0.0))(react@19.0.0)
       react:
         specifier: 19.0.0
         version: 19.0.0
@@ -24,6 +30,9 @@ importers:
       '@babel/core':
         specifier: ^7.20.0
         version: 7.27.4
+      prettier:
+        specifier: ^3.6.1
+        version: 3.6.1
 
 packages:
 
@@ -1248,6 +1257,16 @@ packages:
       expo: '*'
       react: '*'
 
+  expo-image-loader@5.1.0:
+    resolution: {integrity: sha512-sEBx3zDQIODWbB5JwzE7ZL5FJD+DK3LVLWBVJy6VzsqIA6nDEnSFnsnWyCfCTSvbGigMATs1lgkC2nz3Jpve1Q==}
+    peerDependencies:
+      expo: '*'
+
+  expo-image-picker@16.1.4:
+    resolution: {integrity: sha512-bTmmxtw1AohUT+HxEBn2vYwdeOrj1CLpMXKjvi9FKSoSbpcarT4xxI0z7YyGwDGHbrJqyyic3I9TTdP2J2b4YA==}
+    peerDependencies:
+      expo: '*'
+
   expo-keep-awake@14.1.4:
     resolution: {integrity: sha512-wU9qOnosy4+U4z/o4h8W9PjPvcFMfZXrlUoKTMBW7F4pLqhkkP/5G4EviPZixv4XWFMjn1ExQ5rV6BX8GwJsWA==}
     peerDependencies:
@@ -1264,6 +1283,13 @@ packages:
   expo-status-bar@2.2.3:
     resolution: {integrity: sha512-+c8R3AESBoduunxTJ8353SqKAKpxL6DvcD8VKBuh81zzJyUUbfB4CVjr1GufSJEKsMzNPXZU+HJwXx7Xh7lx8Q==}
     peerDependencies:
+      react: '*'
+      react-native: '*'
+
+  expo-video@2.2.2:
+    resolution: {integrity: sha512-SJrW1CeiWO7WCaAVMbjqGlvOMJfU/x+d0g9izjsnEXdV/KE3NhuCI3Y/3zCcFiAoR+jrHEtlI8sPlkLx3dq8xw==}
+    peerDependencies:
+      expo: '*'
       react: '*'
       react-native: '*'
 
@@ -1953,6 +1979,11 @@ packages:
   postcss@8.4.49:
     resolution: {integrity: sha512-OCVPnIObs4N29kxTjzLfUryOkvZEq+pf8jTF0lg8E7uETuWHA+v7j3c/xJmiqpX450191LlmZfUKkXxkTry7nA==}
     engines: {node: ^10 || ^12 || >=14}
+
+  prettier@3.6.1:
+    resolution: {integrity: sha512-5xGWRa90Sp2+x1dQtNpIpeOQpTDBs9cZDmA/qs2vDNN2i18PdapqY7CmBeyLlMuGqXJRIOPaCaVZTLNQRWUH/A==}
+    engines: {node: '>=14'}
+    hasBin: true
 
   pretty-bytes@5.6.0:
     resolution: {integrity: sha512-FFw039TmrBqFK8ma/7OL3sDz/VytdtJr044/QUJtH0wK9lb9jLq9tJyIxUwtQJHwar2BqtiA4iCWSwo9JLkzFg==}
@@ -4094,6 +4125,15 @@ snapshots:
       fontfaceobserver: 2.3.0
       react: 19.0.0
 
+  expo-image-loader@5.1.0(expo@53.0.12(@babel/core@7.27.4)(react-native@0.79.4(@babel/core@7.27.4)(react@19.0.0))(react@19.0.0)):
+    dependencies:
+      expo: 53.0.12(@babel/core@7.27.4)(react-native@0.79.4(@babel/core@7.27.4)(react@19.0.0))(react@19.0.0)
+
+  expo-image-picker@16.1.4(expo@53.0.12(@babel/core@7.27.4)(react-native@0.79.4(@babel/core@7.27.4)(react@19.0.0))(react@19.0.0)):
+    dependencies:
+      expo: 53.0.12(@babel/core@7.27.4)(react-native@0.79.4(@babel/core@7.27.4)(react@19.0.0))(react@19.0.0)
+      expo-image-loader: 5.1.0(expo@53.0.12(@babel/core@7.27.4)(react-native@0.79.4(@babel/core@7.27.4)(react@19.0.0))(react@19.0.0))
+
   expo-keep-awake@14.1.4(expo@53.0.12(@babel/core@7.27.4)(react-native@0.79.4(@babel/core@7.27.4)(react@19.0.0))(react@19.0.0))(react@19.0.0):
     dependencies:
       expo: 53.0.12(@babel/core@7.27.4)(react-native@0.79.4(@babel/core@7.27.4)(react@19.0.0))(react@19.0.0)
@@ -4119,6 +4159,12 @@ snapshots:
       react-native: 0.79.4(@babel/core@7.27.4)(react@19.0.0)
       react-native-edge-to-edge: 1.6.0(react-native@0.79.4(@babel/core@7.27.4)(react@19.0.0))(react@19.0.0)
       react-native-is-edge-to-edge: 1.1.7(react-native@0.79.4(@babel/core@7.27.4)(react@19.0.0))(react@19.0.0)
+
+  expo-video@2.2.2(expo@53.0.12(@babel/core@7.27.4)(react-native@0.79.4(@babel/core@7.27.4)(react@19.0.0))(react@19.0.0))(react-native@0.79.4(@babel/core@7.27.4)(react@19.0.0))(react@19.0.0):
+    dependencies:
+      expo: 53.0.12(@babel/core@7.27.4)(react-native@0.79.4(@babel/core@7.27.4)(react@19.0.0))(react@19.0.0)
+      react: 19.0.0
+      react-native: 0.79.4(@babel/core@7.27.4)(react@19.0.0)
 
   expo@53.0.12(@babel/core@7.27.4)(react-native@0.79.4(@babel/core@7.27.4)(react@19.0.0))(react@19.0.0):
     dependencies:
@@ -4887,6 +4933,8 @@ snapshots:
       nanoid: 3.3.11
       picocolors: 1.1.1
       source-map-js: 1.2.1
+
+  prettier@3.6.1: {}
 
   pretty-bytes@5.6.0: {}
 

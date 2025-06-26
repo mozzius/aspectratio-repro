@@ -10,13 +10,16 @@
   },
   "dependencies": {
     "expo": "~53.0.12",
+    "expo-image-picker": "~16.1.4",
     "expo-status-bar": "~2.2.3",
+    "expo-video": "~2.2.2",
     "react": "19.0.0",
     "react-native": "0.79.4"
   },
   "devDependencies": {
-    "@babel/core": "^7.20.0"
+    "@babel/core": "^7.20.0",
+    "prettier": "^3.6.1"
   },
   "private": true,
-  "packageManager": "pnpm@10.12.2+sha512.a32540185b964ee30bb4e979e405adc6af59226b438ee4cc19f9e8773667a66d302f5bfee60a39d3cac69e35e4b96e708a71dd002b7e9359c4112a1722ac323f"
+  "packageManager": "pnpm@10.12.3+sha512.467df2c586056165580ad6dfb54ceaad94c5a30f80893ebdec5a44c5aa73c205ae4a5bb9d5ed6bb84ea7c249ece786642bbb49d06a307df218d03da41c317417"
 }
