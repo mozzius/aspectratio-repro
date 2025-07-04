@@ -2,11 +2,13 @@ import { StatusBar } from "expo-status-bar";
 import * as ImagePicker from "expo-image-picker";
 import { useVideoPlayer, VideoView } from "expo-video";
 import { Button, StyleSheet, View, Text } from "react-native";
+import * as MediaLibrary from "expo-media-library";
 import { useState } from "react";
 
 export default function App() {
   const [pickedVideo, setPickedVideo] = useState(null);
   const [status, request] = ImagePicker.useMediaLibraryPermissions();
+  const [status2, request2] = MediaLibrary.usePermissions();
 
   return (
     <View style={styles.container}>
@@ -39,11 +41,29 @@ export default function App() {
           }
           const res = await ImagePicker.launchImageLibraryAsync({
             mediaTypes: ["videos"],
+            preferredAssetRepresentationMode:
+              ImagePicker.UIImagePickerPreferredAssetRepresentationMode.Current,
           }).catch(console.error);
 
           if (res?.assets) {
             setPickedVideo(res.assets[0]);
           }
+        }}
+      />
+      <Button
+        title="Save and re-read w/ expo-media-library"
+        onPress={async () => {
+          if (!status2.granted) {
+            await request2();
+          }
+
+          const create = await MediaLibrary.createAssetAsync(pickedVideo.uri);
+
+          setPickedVideo(null);
+
+          await new Promise((resolve) => setTimeout(resolve, 1000));
+
+          setPickedVideo(create);
         }}
       />
       <StatusBar style="auto" />
